@@ -1,0 +1,150 @@
+{
+	"info": {
+		"_postman_id": "6dca7ce5-fdf2-4545-9faa-d3d3468393e7",
+		"name": "demo-manage-user",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11635491"
+	},
+	"item": [
+		{
+			"name": "localhost:3001/api/users",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiaWF0IjoxNzE3OTkwMTY1LCJleHAiOjE3MTc5OTM3NjV9.RQUn27SorgrHHWE5pZP4n5ww7VNz_YgjLOSiQUy6dYM"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Aditya\",\r\n    \"lastName\": \"Das\",\r\n    \"email\": \"here_aditya@yahoo.co.in\",\r\n    \"phoneNumber\": \"9804339685\",\r\n    \"dob\": \"1982-12-21T18:30:00.000Z\",\r\n    \"gender\": \"Male\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/api/users",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3001/api/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"aditya\",\r\n    \"password\": \"test123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/api/register",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3001/api/login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"aditya\",\r\n    \"password\": \"test123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/api/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3001/api/addresses",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiaWF0IjoxNzE3OTkwMTY1LCJleHAiOjE3MTc5OTM3NjV9.RQUn27SorgrHHWE5pZP4n5ww7VNz_YgjLOSiQUy6dYM"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"street\": \"210 Samaj Kalyan Rd\",\r\n        \"city\": \"Kolkata\",\r\n        \"state\": \"WB\",\r\n        \"postalCode\": \"700126\",\r\n        \"country\": \"India\",\r\n        \"userId\": 1\r\n    },\r\n    {\r\n        \"street\": \"215 Samaj Kalyan Rd\",\r\n        \"city\": \"Kolkata\",\r\n        \"state\": \"WB\",\r\n        \"postalCode\": \"700125\",\r\n        \"country\": \"India\",\r\n        \"userId\": 1\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/api/addresses",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"addresses"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "UserId",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

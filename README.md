@@ -1,3 +1,3 @@
 - Add environment variables in  **.env** as per system config
 - run the app using - **npx nodemon server.js**
-- Postman collection file - **demo-manage-user.postman_collection.json**
+- Postman collection file - **postman\demo-manage-user.postman_collection.json**
