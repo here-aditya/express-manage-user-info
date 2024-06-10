@@ -1,4 +1,4 @@
-const { Authentication, User } = require('../models/common');
+const { Authentication } = require('../models/common');
 const jwt = require('jsonwebtoken');
 const Joi = require('joi');
 require('dotenv').config();
@@ -50,9 +50,8 @@ exports.refreshToken = async (req, res) => {
     const auth = await Authentication.findByPk(decoded.id);
     if (!auth) return res.sendStatus(403);
 
-    const user = await User.findOne({ where: { authId: decoded.id } });
     const accessToken = jwt.sign({ id: decoded.id }, process.env.JWT_SECRET, { expiresIn: process.env.JWT_EXPIRATION });
-    res.json({ user, accessToken });
+    res.json({ accessToken });
   } catch (error) {
     res.sendStatus(403);
   }
